@@ -1,0 +1,108 @@
+body {
+    background: rgba(0, 0, 0, 0.962);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+.keyboard {
+    text-decoration: white;
+    width: 850px;
+}
+
+.row{
+    display: flex;
+}
+
+.keys1{
+    border: 1px solid whitesmoke;
+    display: flex;
+    height: 25px;
+    width: 45px;
+    border-radius: 10%;
+    margin: 2.54px;
+    justify-content: center;
+    align-items: center;
+}
+
+.keys2{
+    border: 1px solid white;
+    display: flex;
+    height: 50px;
+    width: 50px;
+    border-radius: 10%;
+    margin: 2px;
+    justify-content: center;
+    align-items: center;
+}
+
+.PgUpDn{
+    border: 1px solid white;
+    display: flex;
+    height: 25px;
+    width: 60px;
+    border-radius: 10%;
+    justify-content: center;
+    align-items: center;
+}
+
+.home,.end{
+    border: 1px solid white;
+    display: flex;
+    height: 25px;
+    width: 60px;
+    border-radius: 10%;
+    justify-content: center;
+    align-items: center;
+}
+
+.home1,.end1{
+    border: 1px solid black;
+    display: flex;
+    height: 21px;
+    width: 60px;
+    border-radius: 10%;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.tilde{
+    width: 60px}
+
+.backspace{
+    width: 90px;
+}
+
+.tab{
+    width: 90px;
+}
+
+.slash{
+    width: 60px;
+}
+
+.capslock{
+    width: 100px;
+}
+
+
+.enter{
+    width: 106px;
+}
+
+.shift{
+    width: 131px;
+}
+
+.ctrl1{
+    width: 75px;
+}
+
+.space{
+    width: 275px;
+}
+
+
+
