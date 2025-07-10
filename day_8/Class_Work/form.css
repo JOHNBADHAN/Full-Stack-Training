@@ -1,0 +1,39 @@
+
+#parent{
+    width: 40%;
+    height: 450px;
+    border: 1px solid green;
+    border-radius: 10px;
+    margin: auto;
+    text-align: center;
+
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+input{
+    padding: 10px;
+    width: 95%;
+    margin-top: 30px;
+}
+
+#btn{
+    margin-top: 40px;
+    width: 50%;
+    padding: 10px;
+    cursor: pointer;
+    background-color: beige;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+#btn:hover{
+    background-color: cornflowerblue;
+    font-size: 16px;
+    font-weight: 500;
+    color: brown;
+}
+
+input:focus{
+    background-color: aqua;
+}
+
