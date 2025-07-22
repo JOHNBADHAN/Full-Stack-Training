@@ -1,27 +1,34 @@
-//if connection is using mongoose then schema will also use mongoose
-const mongoose = require("mongoose");
+const { userModel } = require("../models/user.model");
+const jwt = require("jsonwebtoken");
 
-const userSchema = mongoose.Schema({
-    name:{
-        type:String
-    },
-    email:{
-        type:String
-    },
-    password:{
-        type:String
-    },
-    phoneNumber:{
-        type:String
-    },
-    age:{
-        type:Number
+
+
+const auth = async(req,res,next) =>{
+    const token = req.headers.authorization;
+    console.log(token);
+    
+    if(!token){
+        res.send("Invalid Token")
     }
-});
 
 
-const userModel = mongoose.model("user",userSchema)
+    try {
+        const decoded = jwt.verify(token, 'RB');
+
+        const userId = decoded.userId;
+        const matchedUser = await userModel.findOne({_id:userId});
+        if(matchedUser){
+            //req.header==??????
+            next();
+        }else{
+            return res.status(400).send({msg:"user not authorized"})
+        }
+
+    } catch (error) {
+        return res.status(400).send({msg:error.message})
+    }
+}
 
 module.exports = {
-    userModel
+    auth
 }

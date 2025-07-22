@@ -1,16 +1,7 @@
-// // // const cowsay = require('cowsay');
-
-// // // const cow = cowsay.say({
-// // //     text:"Cowwwwwwwwww",
-// // //     e : "oO",
-// // //     T : "U" 
-// // // })
-
-// // // console.log(cow);
-
 const express = require("express")
 const { connection } = require("./configs/db");
 const { userRoute } = require("./routes/user.route"); 
+const { productRoute } = require("./routes/products.route");
 
 const app = express();
 app.use(express.json());
@@ -21,7 +12,7 @@ app.get("/",(req,res)=>{
 
 app.use(userRoute);
 app.use(productRoute);
-                         
+
 const PORT = 8080;
 
 app.listen(PORT, async() => {
@@ -37,4 +28,3 @@ app.listen(PORT, async() => {
     }
     console.log(`Server is running at http://localhost:${PORT}`);
 })
-                                                                                                   
